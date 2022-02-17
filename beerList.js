@@ -4,6 +4,7 @@ export class BeerList {
 	constructor(renderEl) {
 		this.renderEl = renderEl; //adding container element
 		this.handleBeerListUpdate(); //Listening to the beerList update
+		this.handleFavoriteListUpdate();
 	}
 
 	renderBeerList() { //re-rendering all beer list
@@ -21,4 +22,11 @@ export class BeerList {
             this.renderBeerList();
 		});
 	}
+
+	handleFavoriteListUpdate() {
+        document.addEventListener('favoriteUpdate', () => {
+            this.destroyBeerList();
+            this.renderBeerList();
+        })
+    }
 }

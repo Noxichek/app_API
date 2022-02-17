@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/799b582318.js" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <title>IPA Beer</title>
 </head>
 <body>
@@ -13,9 +14,9 @@
     <header>
         <h1>IPA Beer</h1>
         <div class="favourites">
-            <button class="btn" id="btn"><span>Избранное</span></button>
+            <button class="btn" id="btn-fav"><span>Избранное</span></button>
             <div class="searech">
-                <input type="text" placeholder="Search">
+                <input class="search" type="text" placeholder="Search">
                 <i class="fa fa-search" aria-hidden="true"></i>
             </div>
         </div>
@@ -24,6 +25,13 @@
     <div class="beer-list">
         
 
+    </div>
+
+    <div class="myModal">
+        <div class="modal-content">
+            <div class="close">&times;</div>
+            <div class="modal-list"></div>
+        </div>
     </div>
 
     <script src="script.js" type="module"></script>

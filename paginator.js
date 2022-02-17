@@ -15,8 +15,7 @@ export class Paginator {
 			const updateBeerListEvent = new CustomEvent('updateBeerData', { detail: beerData });
 			document.dispatchEvent(updateBeerListEvent);
             this.currentPage++;
-		});
-    }
+		})}
 
     resetPage() {
         this.currentPage = 1;
