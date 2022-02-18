@@ -50,8 +50,5 @@ export class BeerItem {
 		return el;
 	}
 
-    destroy() {
-        this.elementRef.remove();
-    }
 }
 

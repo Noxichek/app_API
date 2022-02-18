@@ -12,7 +12,7 @@ export class BeerList {
 	}
 
     destroyBeerList() {
-        this.beers.forEach(el => el.destroy())
+        this.renderEl.innerHTML = '';
     }
 
 	handleBeerListUpdate() { // Listening to the beerData update

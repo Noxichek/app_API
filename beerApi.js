@@ -3,7 +3,7 @@ export class BeerApi {
         this.dataUrl = dataUrl;
     }
 
-    async getPaginatedData(currentPage, itemsPerPage=20) {
+    async getPaginatedData(currentPage, itemsPerPage = 20) {
         return await fetch(`${this.dataUrl}?page=${currentPage}&per_page=${itemsPerPage}`)
 		.then(response => {
 			return response.json();

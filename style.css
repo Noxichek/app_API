@@ -8,6 +8,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: #8bb6f7;
+	height: 12vh;
 }
 
 h1 {
@@ -81,14 +82,10 @@ input {
     border-radius: 5%;
 }
 
-/* .beer-list {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: 100%;
-    background-color:rgba(0, 0, 0, 0.95);
-    border-radius: 5%;
-} */
+.beer-list {
+	overflow: auto;
+    height: 88vh;
+}
 
 .beer-item {
     display: flex;

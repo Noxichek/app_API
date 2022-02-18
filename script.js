@@ -24,6 +24,7 @@ class App {
     
     searchBeer() {
         const search = document.querySelector(".search")
+        const clear = document.querySelector(".fa-times")
         search.addEventListener('input', () => {
             if(search.value) {
             this.beerApi.searchData(search.value)
@@ -32,13 +33,19 @@ class App {
                 const updateBeerListEvent = new CustomEvent('updateBeerData', { detail: beerData });
                 document.dispatchEvent(updateBeerListEvent);
             })} else {
+                this.paginator.resetPage()
                 this.paginator.loadData()
             }
         })
 
+        clear.addEventListener("click", () => {
+            search.value = ''
+            this.paginator.resetPage()
+            this.paginator.loadData()
+        })
     }
 
 }
 
 
-document.addEventListener('DOMContentLoaded', () => new App(document.body))
+document.addEventListener('DOMContentLoaded', () => new App(document.querySelector('.beer-list')))

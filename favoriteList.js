@@ -8,7 +8,7 @@ export class FavoriteList {
 	}
 
     destroyBeerList() {
-        this.beers.forEach(el => el.destroy())
+        this.renderEl.innerHTML = '';
     }
 
     handleBeerListUpdate() { // Listening to the beerData update
@@ -18,6 +18,7 @@ export class FavoriteList {
 	}
 
 	renderFavoriteList() {
+        this.destroyBeerList();
 		this.beers.filter((el) => el.isFavorite).forEach((item) => item.render(this.renderEl));
 	}
 
